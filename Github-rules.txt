@@ -1,0 +1,3 @@
+Git hub rules
+CD is change directry
+checkout is for chage branchs
