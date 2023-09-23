@@ -1,1 +1,1 @@
-# Resturant
+Clone this project
