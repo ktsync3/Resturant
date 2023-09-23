@@ -1,0 +1,176 @@
+<!-- how many columns == 3
+ how many rows == 3
+how many sections == 
+header (cols-> 1/4, rows->1/1), l
+left sidebar(cols->1/1, rows->2/2), 
+content (cols-> 2/3, rows -> 2/2),
+right side bar (cols->3/4, rows = 2/2), 
+footer (cols=> 1/4, rows = 3/3) 
+background color for the wrapper #e5e5es
+background color  #3d5a9c
+background color for the left and right side bars
+#ccd0d6
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final exam solutions</title>
+    <meta name="description" content="final exam for full stack trainees" />
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 0fr 2fr 0.2fr;
+        gap: 5px;
+        background-color: #e5e5e5;
+        width: 100%;
+        height: 100%;
+      }
+      .header {
+        grid-column: 1/4;
+        grid-row: 1/1;
+        background-color: #3d5a9c;
+        display: flex;
+        flex-direction: row;
+        height: 52px;
+      }
+      .leftSideBar {
+        grid-column: 1/1;
+        grid-row: 2/2;
+        background-color: #ccd0d6;
+        width: 123px;
+        margin-left: 20px;
+      }
+      .content {
+        grid-column: 2/2;
+        grid-row: 2/2;
+        background-color: #fbfbfb;
+        width: 100%;
+      }
+      .rightSideBar {
+        grid-column: 3/3;
+        grid-row: 2/2;
+        background-color: #ccd0d6;
+        width: 123px;
+        margin-left: 50%;
+      }
+      .rightSideBar form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+      .footer {
+        grid-column: 1/4;
+        grid-row: 3/3;
+        background-color: #fbfbfb;
+        background-color: #e5e5e5;
+        margin-bottom: 0px;
+        text-align: center;
+      }
+
+      h1 {
+        color: white;
+      }
+      .header ul {
+        display: flex;
+        flex-direction: row;
+      }
+      .header li {
+        margin-left: 10px;
+        background-color: white;
+        color: #3d5a9c;
+        padding: 1px;
+        text-align: center;
+      }
+      #leftSideBarList li {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        background-color: white;
+        color: #3d5a9c;
+        text-align: center;
+      }
+      #leftSideBarList {
+        margin-top: 150%;
+        padding-left: 10px;
+        margin-right: 10px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+      .content p {
+        padding-left: 10px;
+        justify-content: center;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0px;
+      }
+      @media (max-width: 768px) {
+        .header ul {
+          display: flex;
+          flex-direction: column;
+        }
+        .header ul li {
+          margin-top: 5px;
+          z-index: 1;
+          background-color: lightblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="header">
+        <img src="../Bee.ico" alt="Bee Resturant" />
+        <h1>Bee Resturant</h1>
+        <ul type="none">
+          <li>Home</li>
+          <li>Who We are</li>
+          <li>Menu</li>
+        </ul>
+      </section>
+      <section class="leftSideBar">
+        <ul type="none" id="leftSideBarList">
+          <li>Dessserts</li>
+          <li>More info</li>
+        </ul>
+      </section>
+      <section class="content">
+        <p>
+          Tucked away in the heart of the city, the Whispering Pines Restaurant
+          feels like a secret world of its own. As you step through its ornate
+          glass doors, you're greeted by an ambiance that effortlessly marries
+          rustic charm with contemporary flair. Hardwood floors, bathed in the
+          soft glow of ambient lighting, lead the way to tables adorned with
+          pristine white tablecloths and delicate china.
+        </p>
+
+        <p>
+          The walls, lined with vintage photographs, tell a silent story of the
+          town's history, transporting guests to a bygone era. Every corner,
+          every brick in the Whispering Pines whispers tales from yesteryears,
+          wrapping visitors in a comforting embrace of nostalgia.
+        </p>
+      </section>
+      <section class="rightSideBar">
+        <form action="sumbit.js" method="post">
+          <label for="username"> Username * </label>
+          <input type="text" name="username" id="username" required />
+          <label for="password"> Password * </label>
+          <input type="password" name="password" id="password" required />
+          <button type="submit" name="submit">Login</button>
+        </form>
+      </section>
+      <section class="footer">&copy; All rights reserved</section>
+    </main>
+  </body>
+</html>
