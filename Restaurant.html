@@ -4,46 +4,174 @@ git<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Restaurant</title>
-    <meta name="description" content="final exam for full stack">
-    <link rel="stylesheet" href="cssgrid.css">
+    <meta name="description" content="final exam for full stack trainees">
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 0fr 2fr 0.4fr;
+            gap: 5px;
+            background-color: #e5e5e5;
+            width: 100%;
+            height: 100%;
+        }
+        .header {
+            grid-column: 1/4;
+            grid-row: 1/1;
+            background-color: #3d5a9c;
+            display: flex;
+            flex-direction: row;
+            height: 52px;
+        }
+        .h1 {
+            color: white;
+            display: flex;
+            flex-direction: row;
+        }
+        .header ul {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            margin-left: 30px;
+            background-color: white;
+            color: #3d5a9c;
+            border: white;
+            padding: 2px;
+        }
+        .leftsidebar {
+            grid-column: 1/1;
+            grid-row: 2/2;
+            background-color: #ccd0d6;
+            width: 123px;
+            margin-left: 20px;
+        }
+        
+        .content {
+            grid-column: 2/2;
+            grid-row: 2/2;
+            background-color: #fbfbfb;
+            width: 100%;
+        }
+        #leftsidebarList li {
+            margin-bottom: 10px;
+            background-color: white;
+            color: #3d5a9c;
+            margin-right: 15px;
+            text-align: center;
+        }
+        #leftsidebarList {
+            margin-top: 100%;
+            padding-left: 5px;
+            margin-right: 10px;
+        }
+        .rightsidebar {
+            grid-column: 3/3;
+            grid-row: 2/2;
+            background-color: #ccd0d6;;
+            text-align: center;
+            width: 123px;
+            margin-left: 80px;
+        }
+
+        .rightsidebar form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 70px;
+        }
+        .footer {
+            grid-column: 1/4;
+            grid-row: 3/3;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            margin-left: 5px;
+            padding-top: 2px;
+            margin-right: 15px;
+        }
+        .content p {
+            padding-left: 10px;
+            justify-content: center;
+
+        }
+        body html {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        @media(max-width:768px) {
+            .header ul {
+                display: flex;
+                flex-direction: column;
+            }
+            .header ul li {
+                margin-top: 5px;
+                z-index: 1;
+                background-color: lightblue;
+            }
+             }
+        
+
+    </style>
 </head>
-<body>  
-    <main class= "wrapper">
-    <section class="header">
-         <img src="Ice cream.jpeg"     
-         alt="picture of ice cream with berries on top">
-        <h1>Bee Restaurant</h1>
-        <ul type= "none">
-            <li> Home </li>
-            <li> Who we are </li>
-            <li> Menu </li>
-        </ul>
-    </section>
-    <section class="leftsidebar">
-        <ul type= "none">
-            <li> Desserts </li>
-            <li> More info </li>
-        </ul>
-    </section>
-    <section class="content">
-            <p> Tucked away in the heart of the city, the Whispering Pines Restaurant feels like a secret world of its own. As you step through its omate glass doors, you're greeted by an amblance that effortlessly marries rustic charm with contemporary flair."Hardwood floors, bathed in the soft glow of ambient lighting lead the way to tables adorned with pristine white tablecloths and delicate china. </p> 
+<body>
+    <main class="wrapper">
+        <section class="header"><img src="honey_bee.png"/>
+            <h1 style="color: white;"> Bee Restaurant</h1>
+            <ul type="none">
+                <li> Home </li>
+                <li> Who We Are </li>
+                <li> Menu </li>
+            </ul>
+        </section>
+        </section>
+        <section class="leftsidebar">
+            <ul type="none" id="leftsidebarList">
+                <li> dessert </li>
+                <li> more info </li>
+            </ul>
+        </section>
+        <section class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut 
+                aliquip ex ea commodo consequat.
+                </p>
+        </section>
+        <section class="rightsidebar">
+            <form action="submit.js" method="post">
+                <label for="username"> username *</label>
+                <input type="text" name="username" id="username" required/>
+                <label for="password"> Password * </label>
+                <input type="password" name="Password" required/>
+                <button type="submit" name="submit"> login </button>
 
-            <p>The walls, lined with vintage photographs, tell a silent story of the town's history, tranporting guests to a bygone era. Every corner every brick in the whispering pines whispers tales from yesteryears, wrapping vistitors in a comforing embrace of nostalgia.</p>
-    </section>
-    <section class="rightsidebar">
-        <form action="submit.js" method="post">
-            <label for="username"> username * </label>
-            <input type="text" name="username" id="username" required/>
-            <label for="password"> Password * </label>
-            <input type="password" name="password" id="password" required/>
-            <lable for="login"> login </lable>
-            <button type="submit" name="submit"> login</button>
-        </form>
-    </section>
-    <section class="footer">
-            &copy; All rights reserved
-
-    </section>       
+            </form>
+        </section>
+        <section class="footer">
+            &copy; All rights are reserved.
+        </section>
     </main>
+    
 </body>
 </html>
