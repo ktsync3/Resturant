@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Employees Information form</title>
+        <meta name="Keyword" content="Name, Age, Sex, Educational leve, software, Employees">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Discription" content="Employees Information form registration purpose">
+    </head>
+    <body>
+        <h2>Employees Information Registration Form</h2>
+        <form action="submit-form.php" method="post">
+            <label for="name">Name *: </label>
+            <input type="text" name="name" id="name" required>
+            <label for="last-name">Last-Name *: </label>
+            <input type="text" name="last-name" id="last-name" required>
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age"> <br>
+            <label for="username">username *: </label> 
+            <input type="text" name="username" id="username" placeholder = "Hailay" required> 
+            <label for = "email">email *: </label>
+            <input type="email" name="email" id="email" placeholder="hailay@yahoo.com" required> <br>
+            <label for ="password">password: </label>
+            <input type="password" name="password" id="password" placeholder="PASSWORD" required> 
+            <label for ="confirm">confirm password: </label>
+            <input type="password" name= "password1" id="confirm"> <br>
+            <label for ="male">male: </label>
+            <input type="radio" name="male" id="male"> 
+            <label for ="female">female: </label>
+            <input type="radio" name="female" id="female"> <br>
+            <label for ="phone">phone *: </label> 
+            <input type="text" name="phone" id="phone" placeholder="(098)765-4321" required pattern="[0-9]{10}"> <br>
+            <label for ="message">message:</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea> <br>
+                <input type="submit" value="Submit"> <br>
+
+        </form>
+    </body>
+</html>
